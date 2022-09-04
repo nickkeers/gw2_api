@@ -80,7 +80,7 @@ defmodule Gw2Api.Achievements do
   end
 
   defp format_reward(reward) do
-    %{reward | type: String.to_atom(reward["type"])}
+    %{reward | type: String.to_atom(reward.type)}
   end
 
   def get(id) do
