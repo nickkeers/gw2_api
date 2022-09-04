@@ -14,6 +14,7 @@ defmodule Gw2Api.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      mod: {Gw2Api, []},
       extra_applications: [:logger]
     ]
   end
