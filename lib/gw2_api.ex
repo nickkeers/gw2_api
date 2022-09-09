@@ -6,7 +6,7 @@ defmodule Gw2Api do
   use Application
 
   def api_key() do
-    Application.get_env(Gw2Api, :api_key, "")
+    Application.get_env(Gw2Api, :api_key, "41261896-9769-1D4B-A746-8188C0DF9C54B3000CED-F788-45AF-817D-A992062A7614")
   end
 
 
