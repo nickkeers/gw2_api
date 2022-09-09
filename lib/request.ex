@@ -1,10 +1,15 @@
 defmodule Gw2Api.Request do
-  def get(url) do
-    apikey = Gw2Api.api_key()
+  def get(url, apikey \\ :no_api_key) do
+    headers =
+      if apikey != :no_api_key do
+        [
+          {"Authorization", "Bearer #{apikey}"}
+        ]
+      else
+        []
+      end
 
-    Finch.build(:get, url, [
-      {"Authorization", "Bearer #{apikey}"}
-    ])
+    Finch.build(:get, url, headers)
     |> Finch.request(Gw2Finch)
     |> parse_response()
   end
