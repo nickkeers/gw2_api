@@ -19,9 +19,10 @@ defmodule Gw2Api.Achievements.Daily do
       field(:level, %{min: non_neg_integer(), max: non_neg_integer()})
 
       field(:required_access, [
-        GuildWars2
-        | HeartOfThorns
-        | PathOfFire
+        :GuildWars2
+        | :HeartOfThorns
+        | :PathOfFire
+        | :EndOfDragons
       ])
     end
 
